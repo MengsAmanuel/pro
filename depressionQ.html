@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+     #bdy{
+    
+    color: #3f3737;
+    width: 100%;
+    height: 700px;
+    padding: 10px;
+    margin: 30px;
+    background-color: #d69295;
+
+}
+button {
+        font-size: 35px;
+        background-color: #59a1b8;
+        border-radius: 15px;
+        width: 150px; border: none;
+        text-align: center; 
+       }
+
+    </style>
+</head>
+
+<body id="bdy">
+    
+    <h1>CHECK-UP</h1>
+    <h3>
+    1. Unhappiness, emptiness, sadness or irritability most of the day, nearly every day. <br>
+    <input type="radio" name="a" id="x1">True
+    <input type="radio" name="a"> False
+    <br>
+    <br>
+    2. Decreased interest or pleasure in most activities most of the day, nearly every day. <br>
+    <input type="radio" name="b"  id="x2">True
+    <input type="radio" name="b"> False
+    <br>
+    <br>
+    3. Had a significant change in appetite or weight. <br>
+    <input type="radio" name="c" id="x3">True
+    <input type="radio" name="c" >False
+    <br>
+    <br>
+    4. A lowered energy level; even simple tasks are now an effort. <br>
+    <input type="radio" name="d"  id="x4">True
+    <input type="radio" name="d" >False
+    <br>
+    <br>
+    5. Feelings of hopelessness or helplessness.  <br> 
+    <input type="radio" name="e" id="x5">True
+    <input type="radio" name="e" >False
+    <br>
+    <br>
+    6. Trouble concentrating on simple tasks that were never a problem before. <br> 
+    <input type="radio" name="f"  id="x6">True
+    <input type="radio" name="f" >False
+    <br>
+    <br>
+    7. Preferring to stay by yourself rather than interact with other people.   <br>
+    <input type="radio" name="g"  id="x7">True
+    <input type="radio" name="g" >False
+    <br>
+    <br>
+    8. A feeling that you are "not yourself" anymore. <br>
+    <input type="radio" name="h"  id="x8">True
+    <input type="radio" name="h">False
+    <br>
+    <br>
+    9. Your sleep patterns have changed (e.g.,) waking up too early or trouble falling asleep.  <br>
+    <input type="radio" name="k"  id="x9">True
+    <input type="radio" name="k"  >False
+    <br>
+    <br>
+    10. Thoughts of suicide or death.  <br> 
+    <input type="radio" name="b" id="x10">True
+    <input type="radio" name="b"  >False
+    <br>
+    <br>
+    <br>
+       <br>
+    </h3>
+    <center> <a href="depressAns.html" onclick="abc()">Result</a>  </center>
+<br>
+    <br>
+
+   
+<script>
+    function abc(){
+var total=0
+var ans=[3,4,1,2,3,1,1,1,2,4]
+var choices=["x1","x2","x3","x4","x5","x6","x7","x8","x9","x10"]
+for(i=0;i<choices.length;i++)
+{
+    var y=document.getElementById(choices[i])
+        if(y.checked)
+        {
+      total+=ans[i]
+        }
+}
+var val;
+if(total<=2)
+{
+val="you are  not associated with major depression"
+}
+else if(total >=3 && total <=6)
+{
+val="you are associated with modarte depression"
+}
+else{
+val="you are associated with high depression"
+}
+
+sessionStorage.setItem("Result",val)
+    }
+
+
+
+
+</script>
+
+
+    
+</body>
+</html>

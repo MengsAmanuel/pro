@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Answer</title>
+
+    <style>
+            #demo{
+                    background-color:  rgb(19, 100, 100);
+                    border-radius: 10px; 
+                    padding-left: 20px;
+                    padding-right: 20px;
+                    color: white;
+                    width: 96%;
+                    height: 70px;
+            }
+            </style>
+    
+
+</head>
+<body  onload="stress()">
+    
+        <h1 >Your Result</h1>
+        <h2 id="demo"></h2>
+        <h2>
+                Stress management       
+        </h2>
+      <p></p>  To get stress under control, try and find out what’s causing stress,  <br>
+      look for ways to reduce the amount of stress, and learn healthy ways to relieve stress. 
+      <br>  Sometimes it’s clear where the stress is coming from, other times its not so clear. <br>
+       Figuring out what causes stress is important to starting coping skills techniques that helps reduce stress or eliminate all together. <br>
+        You will feel better if you find ways to get stress out of your system.</p>
+                        <h2>Steps toward managing stress</h2> 
+                        <ol>
+                            <li>Change your thinking</li>
+                            <li>When in conflict, negotiate</li>
+                            <li>Pace and balance yourself</li>
+                            <li>Mindfulness</li>
+                            <li>Mediations </li>
+                            <li>Relaxation (sport, music)</li>
+                            <li>Personal Counseling.  (Therapy)</li>
+
+                        </ol>
+                       
+</body>
+<script>
+function stress()
+{
+var x=sessionStorage.getItem("Result")
+document.getElementById("demo").innerHTML=x
+}
+
+
+
+</script>
+</html>
